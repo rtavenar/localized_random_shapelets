@@ -4,8 +4,8 @@ Code for the paper "Localized Random Shapelet model" submitted to ECML 2018.
 
 ## Files
  
-- `models.py` contains the definition of several variants of the Localized Random Shapelets model
-- **TODO** is used to draw shapelets and compute shapelet transforms from a time series dataset
+- `models.py` contains the definition of several variants of the Localized Random Shapelet model
+- <https://github.com/axadil/random-shapelets> is used to draw shapelets and compute shapelet transforms from a time series dataset
 - `xp_ucr_classif.py` is used to perform classification on UCR data (shapelet-transformed time series)
 - `xp_linear_regression.py` is the code used to generate Fig. 5 in the paper
 
