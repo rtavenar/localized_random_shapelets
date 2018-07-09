@@ -1,6 +1,6 @@
 # Localized Random Shapelets
 
-Code for the paper "Localized Random Shapelet model" submitted to ECML 2018.
+Code for the paper "Localized Random Shapelet model".
 
 ## Files
  
