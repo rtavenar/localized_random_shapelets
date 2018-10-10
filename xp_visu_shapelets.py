@@ -24,7 +24,7 @@ sz_shapelets = int(0.1 * ts_sz)
 shapelet_sizes = {sz_shapelets: n_shapelets}
 
 test_ts_id = 0
-yrange = [-1, 2]
+yrange = [-.5, 1.5]
 # LS figure
 shp_clf = ShapeletModel(n_shapelets_per_size=shapelet_sizes,
                         optimizer=Adagrad(lr=.1),
@@ -35,7 +35,7 @@ shp_clf = ShapeletModel(n_shapelets_per_size=shapelet_sizes,
 shp_clf.fit(X_train, y_train)
 predicted_locations = shp_clf.locate(X_test)
 
-plt.figure(figsize=(10, 4))
+plt.figure(figsize=(12, 4))
 plt.plot(X_test[test_ts_id].ravel())
 for idx_shp, shp in enumerate(shp_clf.shapelets_):
     t0 = predicted_locations[test_ts_id, idx_shp]
@@ -44,7 +44,7 @@ plt.xticks([])
 plt.yticks([0., 1.])
 plt.ylim(yrange)
 plt.tight_layout()
-plt.savefig("shapelets_LS.pdf")
+plt.savefig("ls_earthquakes_shapelets+loc.pdf")
 
 # LRS figure
 drawn_shapelets = numpy.empty((n_shapelets, sz_shapelets))
@@ -55,7 +55,7 @@ for i in range(n_shapelets):
 shp_clf.model.get_layer("shapelets_0_0").set_weights([drawn_shapelets])
 predicted_locations = shp_clf.locate(X_test)
 
-plt.figure(figsize=(10, 4))
+plt.figure(figsize=(12, 4))
 plt.plot(X_test[test_ts_id].ravel())
 for idx_shp, shp in enumerate(shp_clf.shapelets_):
     t0 = predicted_locations[test_ts_id, idx_shp]
@@ -64,4 +64,4 @@ plt.xticks([])
 plt.yticks([0., 1.])
 plt.ylim(yrange)
 plt.tight_layout()
-plt.savefig("shapelets_LRS.pdf")
+plt.savefig("lrs_earthquakes_shapelets+loc.pdf")
