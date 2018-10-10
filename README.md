@@ -8,6 +8,7 @@ Code for the paper "Localized Random Shapelets" submitted to PAKDD 2019.
 - <https://github.com/axadil/random-shapelets> is used to draw shapelets and compute shapelet transforms from a time series dataset
 - `xp_ucr_classif.py` is used to perform classification on UCR data (shapelet-transformed time series)
 - `xp_linear_regression.py` is the code used to generate Fig. 5 in the paper
+- `xp_visu_shapelets.py` is the code used to generate Fig. 2 in the paper
 
 ## Result format
 

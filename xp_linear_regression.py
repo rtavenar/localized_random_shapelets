@@ -2,7 +2,6 @@ from models import ssgl_linear_regression
 
 import numpy
 import matplotlib.pyplot as plt
-import matplotlib
 
 
 def bracket(ax, pos, scalex=1., scaley=1., text="",textkw=None, linekw=None):
