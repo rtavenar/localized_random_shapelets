@@ -9,8 +9,6 @@ from tslearn.preprocessing import TimeSeriesScalerMinMax
 from tslearn.datasets import UCR_UEA_datasets
 from tslearn.shapelets import ShapeletModel
 
-__author__ = 'Romain Tavenard romain.tavenard[at]univ-rennes2.fr'
-
 seed = 0
 numpy.random.seed(seed)
 ds_name = "EarthQuakes"
