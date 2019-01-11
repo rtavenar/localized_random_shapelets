@@ -55,7 +55,7 @@ def get_ts(df_ts, shapelet_info):
     numpy array, shape (1, length of the time series)
     """
     ts = shapelet_info['ts']
-    return df_ts.loc[t]
+    return df_ts.loc[ts]
 
 def plot_UCRdataset_shapelet(name_shap, df_ts):
     """
@@ -93,7 +93,7 @@ def multihist(x, **kwargs):
     return plt.hist(x,histtype='step',linewidth=3, **kwargs)
 
 def plot_distribution_loc_dist_TwoPatterns(name_shap,twpatt_df_shaprep,twpatt_y_train):
-	"""
+    """
     Method to plot the distribution of localization and of distance for the selected shapelet in the TwoPatterns dataset
 
     Parameters
@@ -106,9 +106,9 @@ def plot_distribution_loc_dist_TwoPatterns(name_shap,twpatt_df_shaprep,twpatt_y_
     -------
     save and plot the distribution of localization and of distance for the selected shapelet
     """
-    df_shaprep['class'] = ['1 (A-A)' if y == 1 else '2 (B-A)' if y == 2 else '3 (A-B)' if y == 3 else '4 (B-B)' for y in y_train]
+    twpatt_df_shaprep['class'] = ['1 (A-A)' if y == 1 else '2 (B-A)' if y == 2 else '3 (A-B)' if y == 3 else '4 (B-B)' for y in twpatt_y_train]
     plt.rc("legend",title_fontsize = 'x-large')
-    shapelet_df = df_shaprep[['{}loc'.format(name_shap),'{}dist'.format(name_shap),'class']]
+    shapelet_df = twpatt_df_shaprep[['{}loc'.format(name_shap),'{}dist'.format(name_shap),'class']]
     shapelet_df = pd.melt(shapelet_df,id_vars=['class'],value_vars=['{}loc'.format(name_shap),'{}dist'.format(name_shap)])
     shapelet_df.replace({'{}loc'.format(name_shap):'loc','{}dist'.format(name_shap):'dist'},inplace=True)
     shapelet_df.columns =['class','category','value']
