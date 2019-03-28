@@ -1,6 +1,6 @@
 # Localized Random Shapelets
 
-Code for the paper "Localized Random Shapelets" submitted to PAKDD 2019.
+Code for the paper "Localized Random Shapelets" submitted to DaWaK 2019.
 
 ## Files
  
