@@ -21,7 +21,7 @@ Code for the paper "Localized Random Shapelets" submitted to PAKDD 2019.
 
 ## Result format
 
-In our UCR experiments, we have drawn 5 sets of 2,000 shapelets for each dataset.
-Hence, we have one result files (the median of the 5 draws for each dataset), and its format is standard CSV.
+In our UCR experiments, we have drawn 2,000 shapelets for each dataset.
+Hence, we have one result files, and its format is standard CSV.
 We have computed critical diagrams and reported them in the paper. 
 
